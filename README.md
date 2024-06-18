@@ -2,7 +2,7 @@
  
 ## Descripción
 
-La aplicación Pokémon Base App es una herramienta interactiva que permite a los usuarios explorar los movimientos y los ítems de los juegos de Pokémon. Utiliza la API de PokeAPI para obtener y mostrar la información relevante.
+La aplicación es una herramienta interactiva que permite a los usuarios explorar los movimientos y los ítems de los juegos de Pokémon. Utiliza la API de PokeAPI para obtener y mostrar la información relevante.
 
 ## Características
 
