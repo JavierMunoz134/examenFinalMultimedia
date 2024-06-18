@@ -23,12 +23,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 // Clase PokeAPI con sus respectivos métodos para obtener la lista de movimientos y objetos
 public class PokeAPI {
 
+    // Atributo de la clase PokeAPI con su respectivo getter para obtener la lista de movimientos
     private static final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
     private static final PokeAPIService service = retrofit.create(PokeAPIService.class);
 
+    // Método para obtener la lista de movimientos
     public static void getMoveList(MutableLiveData<List<MoveListItem>> moveList){
         Call<MoveList> pokeCall = service.getMoveList(844, 0);
         pokeCall.enqueue(new Callback<MoveList>() {

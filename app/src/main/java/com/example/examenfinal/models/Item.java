@@ -31,7 +31,7 @@ public class Item {
     public String getEffect() {
         return effect;
     }
-
+    //Obtener la url de la imagen del item
     public String getUrl() {
         String index = this.name;
         return String.format("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/%s.png", index);

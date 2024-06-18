@@ -50,12 +50,14 @@ public class MoveListRecyclerFragment extends Fragment {
     class MovesAdapter extends RecyclerView.Adapter<MoveViewHolder> {
         List<MoveListItem> moveList;
 
+        // Método onCreateViewHolder para inflar la vista de los elementos del RecyclerView
         @NonNull
         @Override
         public MoveViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             return new MoveViewHolder(ViewholderMoveListBinding.inflate(getLayoutInflater(), parent, false));
         }
 
+        // Método onBindViewHolder para mostrar los elementos en el RecyclerView
         @Override
         public void onBindViewHolder(@NonNull MoveViewHolder holder, int position) {
             MoveListItem element = moveList.get(position);

@@ -47,12 +47,13 @@ public class ItemListRecyclerFragment extends Fragment {
     class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> {
         List<ItemListDetail> itemsList;
 
+        // Método para inflar la vista de los elementos del RecyclerView
         @NonNull
         @Override
         public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             return new ItemViewHolder(ViewholderItemListBinding.inflate(getLayoutInflater(), parent, false));
         }
-
+        // Método para mostrar los elementos en el RecyclerView
         @Override
         public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
             ItemListDetail element = itemsList.get(position);
@@ -69,6 +70,7 @@ public class ItemListRecyclerFragment extends Fragment {
             return itemsList != null ? itemsList.size() : 0;
         }
 
+        // Método para obtener la lista de objetos ItemListDetail
         public void setList(List<ItemListDetail> itemList){
             this.itemsList = itemList;
             notifyDataSetChanged();
@@ -78,6 +80,7 @@ public class ItemListRecyclerFragment extends Fragment {
     static class ItemViewHolder extends RecyclerView.ViewHolder {
         private final ViewholderItemListBinding binding;
 
+        // Constructor de la clase ItemViewHolder
         public ItemViewHolder(ViewholderItemListBinding binding) {
             super(binding.getRoot());
             this.binding = binding;

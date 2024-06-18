@@ -18,19 +18,23 @@ public class MovesViewModel extends AndroidViewModel {
     MutableLiveData<List<MoveListItem>> listElementosMutableLiveData = new MutableLiveData<>();
     MoveListItem selected;
 
+    // Método para obtener la lista de objetos MoveListItem
     public MovesViewModel(@NonNull Application application) {
         super(application);
         PokeAPI.getMoveList(listElementosMutableLiveData);
     }
 
+    // Método para obtener la lista de objetos MoveListItem
     MutableLiveData<List<MoveListItem>> getAll(){
         return listElementosMutableLiveData;
     }
 
+    //  Método para seleccionar un objeto MoveListItem
     public void select(MoveListItem moveListItem) {
         selected = moveListItem;
     }
 
+    // Método para obtener un objeto Move por su nombre
     public MutableLiveData<Move> getSelected() {
         PokeAPI.getMove(selected.getName(), selectedMoveMutableLiveData);
         return selectedMoveMutableLiveData;

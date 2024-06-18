@@ -18,6 +18,7 @@ public interface PokeAPIService {
     @GET("move/{name}")
     Call<Move> getMoveById(@Path("name") String id);
 
+    // Método para obtener la lista de movimientos
     @GET("move")
     Call<MoveList> getMoveList(@Query("limit") int limit, @Query("offset") int offset);
 
@@ -27,6 +28,7 @@ public interface PokeAPIService {
     @GET("item")
     Call<ItemList> getItemList(@Query("limit") int limit, @Query("offset") int offset);
 
+    // Método para obtener un objeto por su nombre
     @GET("item/{name}")
     Call<Item> getItemByName(@Path("name") String name);
 }
