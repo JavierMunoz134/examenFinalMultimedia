@@ -1,31 +1,35 @@
 # examenFinalMultimedia
  
+## Descripción
 
-Esta aplicación muestra un listado de los movimientos que pueden realizar los Pokémon en un Recycler View y permite entrar al detalle de cada uno de ellos. Utiliza la API PokeAPI, específicamente los siguientes endpoints:
+La aplicación Pokémon Base App es una herramienta interactiva que permite a los usuarios explorar los movimientos y los ítems de los juegos de Pokémon. Utiliza la API de PokeAPI para obtener y mostrar la información relevante.
 
-- https://pokeapi.co/api/v2/move
-- https://pokeapi.co/api/v2/move/1/
+## Características
 
-## Detalle de los movimientos
+### Detalle de los movimientos
 
-El detalle de los movimientos (fragment_pokemon_details.xml) se amplía con los siguientes elementos:
+La aplicación muestra un listado de los movimientos que pueden realizar los Pokémon en un Recycler View. Al seleccionar un movimiento, los usuarios pueden ver detalles adicionales, incluyendo:
 
-- Accuracy.
-- Listado de texto con todos los Pokémon que pueden aprender el movimiento.
+- Accuracy: La precisión del movimiento.
+- Pokémon: Un listado de todos los Pokémon que pueden aprender el movimiento.
 
-La visualización se realiza siguiendo las indicaciones de diseño proporcionadas.
+La interfaz de usuario sigue un diseño específico, con un layout de Constraint Layout y una distribución vertical uniforme de los elementos.
 
-## Listado de ítems y detalles de los ítems
+### Listado de ítems y detalles de los ítems
 
-Se crea un listado de los ítems de los juegos de Pokémon, similar al ejemplo facilitado, usando MVVM y Recycler View. Al pulsar sobre un ítem, se muestra el detalle del ítem con los siguientes campos:
+La aplicación también proporciona un listado de los ítems disponibles en los juegos de Pokémon. Este listado se implementa utilizando el patrón de diseño MVVM y un Recycler View. Al seleccionar un ítem, los usuarios pueden ver detalles adicionales, incluyendo:
 
-- El nombre del ítem.
-- La categoría del ítem.
-- El coste.
-- Todos los efectos del ítem (campo short_effect) en modo texto.
-- La imagen (sprites default) del ítem.
+- Nombre: El nombre del ítem.
+- Categoría: La categoría del ítem.
+- Coste: El coste del ítem.
+- Efectos: Todos los efectos del ítem (campo short_effect) en modo texto.
+- Imagen: La imagen (sprites default) del ítem.
 
-La información se obtiene de las siguientes URL:
+## Recursos de la API
 
-- https://pokeapi.co/api/v2/item
-- https://pokeapi.co/api/v2/item/1/
+La aplicación utiliza los siguientes endpoints de la API de PokeAPI para obtener la información necesaria:
+
+- Movimientos: https://pokeapi.co/api/v2/move
+- Detalles del movimiento: https://pokeapi.co/api/v2/move/1/
+- Ítems: https://pokeapi.co/api/v2/item
+- Detalles del ítem: https://pokeapi.co/api/v2/item/1/
